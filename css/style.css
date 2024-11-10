@@ -1,0 +1,50 @@
+h1{
+    color: white;
+}
+.headert{
+    color: whitesmoke;
+}
+.tm
+{
+    color: rgb(255, 255, 255);
+    background-color: rgb(19, 93, 117);
+    box-sizing: border-box;
+    
+
+       
+}
+.navbar nav {
+    
+    display: flex;
+    justify-items: center;
+    background-color: rgb(7, 6, 6);
+    border-radius: 5px;
+    text-wrap: wrap;
+}
+ .navbar nav ul {
+
+    padding-top: 30px;
+    text-align: center;
+    
+    margin: 0 auto;
+    justify-content: inherit;
+    
+}
+.navbar nav ul li {
+    display: inline-flex;
+    padding: 10px 40px;
+    
+
+}
+.navbar a:link , a:visited {
+    color: rgb(128, 127, 127);
+    text-decoration: none;
+}
+
+.navbar a:hover , .navbar a:active {
+  color: rgb(22, 25, 26) ;
+   background-color: bisque;
+   text-shadow: none;
+   
+}
+

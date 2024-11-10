@@ -1,0 +1,266 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\style.css">
+
+    <title> CONTACT US</title>
+    <style >
+       h3{font-size: 20  ;font-style: italic; color: hsla(122, 78%, 26%, 0.703) }
+       img {height: 120; width: 160; }
+       body{background-color: rgb(114, 200, 205);}
+       .bordered {
+            border: 2px;
+            border-style: solid;
+            border-color: black;
+            background-color:  hsla(122, 78%, 26%, 0.703);
+            padding: 2px;
+            border-radius: 5px;
+            
+          
+            outline-offset: -8px;
+
+        }
+    </style>
+
+<script type="text/javascript">
+    function submit()
+    {
+        var n;
+        n = document.getElementById("name").value;
+
+        if (n==''){
+        alert("Enter your name please");
+        return false
+      
+    }
+        var num
+        num = document.getElementById('num').value;
+        val = /^\d{10}$/
+        if (num.match(val)){
+           true
+        }
+        else if(num==''){
+            alert('please add your mobile number!')
+            return false
+        }
+         else {
+            alert('mobile number in invalid!')
+            return false
+        }
+        email = document.getElementById('email').value;
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(email.match(validRegex)){
+            true
+        }
+        else if(email ==''){
+            alert('please enter your email!')
+            return false
+        }
+        else {
+           alert('email is invalid!')
+           return false
+        }
+       
+
+        var phone
+        phone = document.getElementById('phone').value;
+        val = /^\d{7}$/
+        if (phone.match(val)){
+           true
+        }
+        else if(phone==''){
+            alert('please add your phone number!')
+            return false
+        }
+         else {
+            alert('phone number invalid or incomplete!')
+             return false
+        }
+
+        var x;
+        if (document.getElementById('br').checked){
+            x = document.getElementById('br').value;
+        } 
+        else if (document.getElementById('int').checked){
+            x = document.getElementById('int').value;
+        }
+        else if (document.getElementById('ad').checked){
+            x = document.getElementById('ad').value;
+        }
+        else if (document.getElementById('ex').checked){
+            x = document.getElementById('ex').value;
+        }
+        else if (document.getElementById('ms').checked){
+            x = document.getElementById('ms').value;
+        }
+        else{
+            alert('please tell us about your Experties!')
+        }
+
+        var stud;
+        if (document.getElementById('hs').checked){
+            stud = document.getElementById('hs').value;
+        } 
+        else if (document.getElementById('bc').checked){
+            stud = document.getElementById('bc').value;
+        }
+        else if (document.getElementById('md').checked){
+            stud = document.getElementById('md').value;
+        }
+        else if (document.getElementById('phd').checked){
+            stud = document.getElementById('phd').value;
+        }
+        else{
+            alert('please tell us about your academic qualifications!')
+        }
+
+        var comment;
+        comment = document.getElementById("comment").value;
+        if(comment ==''){
+            alert('please add a message!')
+            false
+        }
+        else{
+            true
+        }
+
+        
+        let p_result = document.getElementById('p_result');
+        let pel = document.getElementById('pel');
+        let number = document.getElementById('numbers')
+        let com = document.getElementById('comms');
+
+
+        total = (n + '  | ' + "edu: " + stud + ' - ' + "exp: " + x)
+        p_result.innerText = total;
+       
+        numbe = (phone + ' - ' + num +' - ' + email);
+        number.innerText = numbe
+        com.innerText = comment
+
+    }
+    function form_reset(){
+        document.getElementById('contact_form').reset();
+    }
+
+
+    
+</script>
+</head>
+    <body>
+        <div class="navbar">
+
+            <nav >
+              <h1 class="haedert">Programming <span class="tm"><br>Team</spanp>
+              </h1>
+              <ul>
+                <li><a href="index.html">Home Page</a>
+                </li>
+                <li><a href="projects.html">Projects</a>
+                </li>
+                <li><a href="aboutus.html">About Us</a>
+                </li>
+                <li><a href="contact.html">Contact Us</a>
+                </li>
+                
+               
+             </ul>
+            </nav>
+         </div>
+        
+
+        <form id='contact_form'>
+            
+            <table cellspacing="30" >
+                <tr>
+                    <td > <img src = "img\contnt.png" alt = "PROGRAMMING TEAM" >
+                    </td>
+                    <td align= "left"><h3>Contact Informations:</h3>
+                        <p>
+                            Name : <input id="name" autofocus required placeholder="Enter your Name" type="text" size="40" name="name" > <br/>
+                            <p></p>
+                            Email : <input id="email" required placeholder="Enter your Email" type="email" size="40" name="Email" ><br/> 
+                            <p></p>
+                            Phone No :<input id="phone"  type="text" name="PHONE" style="margin-left: 4px;"><br/>
+                            <p></p>
+                            Mobile No :<input id="num" required type="text" name="Mobile" style="margin-left: 4px;" ><br/>
+                           
+                        </p>  
+                    </td>    
+                    
+                </tr>
+            </table>
+             
+             <hr/>
+            
+            <table cellspacing="30"  >
+               <tr>
+                    <td  align= "left"> 
+                        <p><img src = "img\academyLevel.png" alt = "PROGRAMMING TEAM"/> </p> 
+                    </td> 
+                    <td>
+                        <h3>Academic & Professional Qualifactions:</h3> 
+                        <p>
+                            <input id="hs" name="level0" value="High school" type="checkbox"  /> High school <br/>
+                            <input id="bc" name="level1" value="Bachelor" type="checkbox"  /> Bachelor <br/>
+                            <input id="md" name="level2" value="Master Degree" type="checkbox"  /> Master Degree<br/>
+                            <input id="phd" name="level3" value="PhD" type="checkbox"  /> PhD<br/>
+                        </p> 
+                    </td>
+                </tr>
+            </table>
+        
+            <hr/>
+            <table cellspacing="30" >
+                <tr> 
+                    <td  >
+                      <p><img src = "img\progrmer.png" alt = "PROGRAMMING TEAM" /> </p> 
+                    </td> 
+               
+                    <td>
+                       <h3>Programing Experience Level:</h3>
+                       <p> <input id= 'br' name="proglevel" value="Beginner" type="radio"  /> Beginner<br/>
+                        <input id= 'int' name="proglevel" value="Intermediate" type="radio" /> Intermediate <br/>
+                         <input id= 'ad' name="proglevel" value="Advanced" type="radio" /> Advanced <br/>
+                             <input id= 'ex' name="proglevel" value="Expert" type="radio" /> Expert <br/>
+                             <input id= 'ms' name="proglevel" value="Master" type="radio" /> Master 
+                    
+                        </p> 
+                    </td>    
+                    
+                </tr> 
+            </table>
+            <hr/>
+            <table   cellspacing="30" >
+                <tr>
+                    <td align= "left">
+                       <p><img src = "img\commnt.png" alt = "PROGRAMMING TEAM"/> </p> 
+                    </td> 
+                   
+                    <td>
+                        <h3>Leave us a comment:</h3>
+                        <p><textarea id="comment" name="message" rows="=5" cols="60" > </textarea></p> 
+                    </td>    
+                    
+                </tr>
+            </table>       
+            <hr/>  
+                        
+                     
+        
+        </form>
+        <button type="submit" id="sub" onclick="submit()">Submit</button>
+        <button type="button" id="reset" onclick="form_reset()">Reset</button> </br>
+
+        <p> </p>
+
+        <div id="p_result" style="color:black; font-size: 25px; font-weight: bold;"></div>
+        <div id= 'numbers' style="font-size: 15px; color: hsla(122, 78%, 26%, 0.703)"></div>
+        <p class="bordered" id = 'comms' style="font-size: 12px; color: black;"></p>
+        
+        <p id="pel" style="color:red; font-size: 10;"></p>
+      
+    </body>
+  
+</html>

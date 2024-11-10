@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        p {font-size: 14pt; color: #2121bad8;}
+        h5 {font-size: 16pt; color: #2121bad8;}
+        img {width: 100px; border-radius: 50%;}
+        .navbar {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .navbar li {
+            float: left;
+            margin-right: 15px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .header {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .toggle-button { 
+            margin-top: 10px; 
+            padding: 5px 10px; 
+            cursor: pointer; 
+            background-color: #2121bad8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        .toggle-button:hover {
+            background-color: #1a1a9a;
+        }
+        .additional-info { 
+            display: none; 
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 20px;
+            vertical-align: top;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".toggle-button").click(function(){
+                $(this).next(".additional-info").slideToggle();
+                // Optionally change button text
+                if ($(this).text() === "Read More") {
+                    $(this).text("Read Less");
+                } else {
+                    $(this).text("Read More");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <h1 class="header">Programming <span class="tm"><br>Team</span></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <hr/>
+    <table>
+        <tr>
+            <td>
+                <p>
+                    <img src="img/maha.png" alt="Maha Daoon" />
+                </p>
+                <h5><i>Maha Daoon</i></h5>
+                <button class="toggle-button">Read More</button>
+                <div class="additional-info">
+                    <p>
+                        Bachelor of Electronic Engineering. Programming experience of more than 20 years.<br/>
+                        Owner of <b><a href="#baskets">IACC International Arab Computer Center</a></b> for Education and Professions.<br/>
+                        Experience in teaching and learning with computers for deaf and dumb with special needs.<br/>
+                        Lecturer at the Syrian Engineers Syndicate and at the Training and Rehabilitation Center at the Ministry of Electricity in the Syrian Arab Republic.
+                    </p>
+                </div>
+            </td>
+            <td>
+                <!-- Optional summary or image can go here -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <img src="img/mohammad.png" alt="Mohammad Saymeh" />
+                </p>
+                <h5><i>Mohammad Saymeh</i></h5>
+                <button class="toggle-button">Read More</button>
+                <div class="additional-info">
+                    <p>
+                        Bachelor of Biomedical Engineering. Programming experience of more than 5 years.<br/>
+                        Systems analysis and application software development in Python and C++.<br/>
+                        Experience in Computer-Aided Design Program (AutoCAD Electrical).
+                    </p>
+                </div>
+            </td>
+            <td>
+                <!-- Optional content -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <img src="img/ahmad2.png" alt="Ahmad Ali" />
+                </p>
+                <h5><i>Ahmad Ali</i></h5>
+                <button class="toggle-button">Read More</button>
+                <div class="additional-info">
+                    <p>
+                        I studied medical engineering at Damascus University.<br/>
+                        I worked on several artificial intelligence projects using Python and developed a number of applications using Flutter and Dart.<br/>  
+                        My ambition is to work and develop in introducing artificial intelligence into medical devices and the field of medical care and services.
+                    </p>
+                </div>
+            </td>
+            <td>
+                <!-- Optional content -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <img src="img/yousef.png" alt="Yousef Alkhatip" />
+                </p>
+                <h5><i>Yousef Alkhatip</i></h5>
+                <button class="toggle-button">Read More</button>
+                <div class="additional-info">
+                    <p>
+                        I studied Mechatronics Engineering at Tishreen University, Lattakia.<br/>
+                        Areas of expertise: alternative energies and maintenance of office and digital equipment.<br/>   
+                        Two years of experience in Python programming fields.<br/>
+                        My ambition is to use modern technologies and artificial intelligence in the equipment used on a daily basis to improve and increase work efficiency and productivity.
+                    </p>
+                </div>
+            </td>
+            <td>
+                <!-- Optional content -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <img src="img/majed.png" alt="Majed Esmaiel" />
+                </p>
+                <h5><i>Majed Esmaiel</i></h5>
+                <button class="toggle-button">Read More</button>
+                <div class="additional-info">
+                    <p>
+                        Bachelor in Information Technology Banking Systems Supervisor,<br/>
+                        Experience: 9 Years as Information Security Engineer and Consultant, 12 Years in Consulting.
+                    </p>
+                </div>
+            </td>
+            <td>
+                <!-- Optional content -->
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
